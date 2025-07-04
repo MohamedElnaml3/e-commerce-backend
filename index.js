@@ -31,6 +31,8 @@ app.use('/api/order',orderRouter)
 app.get("/", (req, res) => {
   res.send("API Working");
 });
-app.get("/", (req, res) => {
-  res.send("API Working on Vercel Serverless");
+
+app.listen(port, () => {
+  console.log("Server Started on PORT :" + port);
 });
+
