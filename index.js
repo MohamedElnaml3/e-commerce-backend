@@ -8,6 +8,8 @@ import productRouter from "./routes/productRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/ordersRoute.js";
 
+
+
 // App Config
 const app = express();
 const port = process.env.PORT || 4000;
@@ -29,7 +31,6 @@ app.use('/api/order',orderRouter)
 app.get("/", (req, res) => {
   res.send("API Working");
 });
-
-app.listen(port, () => {
-  console.log("Server Started on PORT :" + port);
+app.get("/", (req, res) => {
+  res.send("API Working on Vercel Serverless");
 });
